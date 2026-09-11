@@ -65,7 +65,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .slide.visible .reveal{opacity:1;transform:none}
 /* Les titres se dévoilent par le bas, sans bouger le texte : le bloc s’ouvre. */
-.encrer{clip-path:inset(0 0 100% 0);transform:translateY(14px);
+.encrer{clip-path:inset(0 0 100% 0);transform:translateY(14px);
   transition:clip-path .95s var(--ease),transform .95s var(--ease)}
 .slide.visible .encrer{clip-path:inset(0 0 0 0);transform:none}
 .filet{transform:scaleX(0);transform-origin:left center;transition:transform 1s var(--ease)}
@@ -73,7 +73,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
 .filet-v{transform:scaleY(0);transform-origin:top center;transition:transform 1s var(--ease)}
 .slide.visible .filet-v{transform:scaleY(1)}
 /* L’aplat se découvre depuis son bord droit, sans translation d’un bloc entier. */
-.pan{clip-path:inset(0 0 0 100%);transition:clip-path 1.1s var(--ease)}
+.pan{clip-path:inset(0 0 0 100%);transition:clip-path 1.1s var(--ease)}
 .slide.visible .pan{clip-path:inset(0 0 0 0)}
 /* Les grands chiffres montent et s’ouvrent légèrement. */
 .jumbo-in{opacity:0;transform:translateY(40px) scale(.94);
@@ -232,7 +232,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
 /* Graphique en barres — positionnement prix */
 .graphe{position:absolute;left:var(--marge);top:352px;width:1640px}
 .ligne-graphe{display:flex;align-items:center;height:62px}
-.ligne-graphe .nom{width:380px;flex:0 0 380px}
+.ligne-graphe .nom{width:380px;flex:0 0 380px}
 .ligne-graphe .nom b{display:block;font-family:var(--sans);font-weight:400;font-size:23px;color:var(--encre)}
 .ligne-graphe .nom span{display:block;font-family:var(--sans);font-weight:400;font-size:16px;
   color:var(--encre-sable);margin-top:3px}
@@ -267,7 +267,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
 /* Risques et réponses */
 .risques{position:absolute;left:var(--marge);top:400px;width:1640px}
 .risque{display:flex;gap:80px;padding:30px 0;border-top:1px solid rgba(217,164,65,.5)}
-.risque .quoi{width:560px;flex:0 0 560px;font-family:var(--serif);font-weight:400;font-size:40px;
+.risque .quoi{width:560px;flex:0 0 560px;font-family:var(--serif);font-weight:400;font-size:40px;
   line-height:1.2;color:var(--encre)}
 .risque .reponse{font-family:var(--sans);font-weight:400;font-size:23px;line-height:1.58;color:var(--encre-douce)}
 .risque .reponse b{font-weight:600;color:var(--grenat)}
@@ -306,14 +306,14 @@ body.mode-edition .edit-aide{display:block}
     <div class="trait-grenat filet d1"></div>
     <p class="couv-surtitre reveal d2">Comité d’agrément — Initiative Pays d’Aix</p>
     <h1 class="couv-titre encrer d3">L’art de se retrouver,<br><em>en Provence</em></h1>
-    <p class="couv-chapo reveal d4">Des retraites féminines autour de la cuisine, du vin et de la
-      naturopathie, dans le Luberon. Quatre sessions ouvertes en 2027.</p>
+    <p class="couv-chapo reveal d4">Retraites thématiques pour femmes, dans le Luberon.
+      Quatre sessions en 2027, huit places chacune.</p>
     <img class="couv-logo reveal d5" src="__LOGO__" alt="Les Provençales">
     <p class="couv-pied reveal d6">Julien &amp; Paulina</p>
     <div class="couv-colonne">
       <div class="repere reveal d4"><span class="cle">Format</span><span class="valeur">7 jours · 6 nuits</span></div>
-      <div class="repere reveal d5"><span class="cle">Groupe</span><span class="valeur">8 participantes</span></div>
-      <div class="repere reveal d6"><span class="cle">Tarif</span><span class="valeur">3 500 €</span></div>
+      <div class="repere reveal d5"><span class="cle">Prix</span><span class="valeur">3 500 € TTC</span></div>
+      <div class="repere reveal d6"><span class="cle">Demande</span><span class="valeur">13 189 €</span></div>
     </div>
     <p class="couv-date reveal d6">Septembre 2026</p>
   </section>
@@ -324,18 +324,18 @@ body.mode-edition .edit-aide{display:block}
     <div class="bord-aplat"></div>
     <p class="surtitre reveal d1">Le projet</p>
     <div class="filet-entete court filet d1"></div>
-    <h2 class="titre court encrer d2" style="font-size:100px">Huit femmes, une passion commune,
-      <em>une semaine en Provence.</em></h2>
-    <p class="chapo reveal d3" style="top:556px;width:1080px">La cuisine, le vin et la naturopathie sont
-      la première thématique, pas la seule. Le format est pensé pour être reproduit.</p>
+    <h2 class="titre court encrer d2" style="font-size:96px">Des séjours thématiques<br><em>pour huit participantes</em></h2>
+    <p class="chapo reveal d3" style="top:600px;width:1080px">La cuisine, le vin et la naturopathie
+      constituent la première thématique. Le format se reproduit sur d’autres passions sans modifier
+      la structure de coûts.</p>
     <div class="colonne" style="top:300px">
       <div class="repere reveal d4"><span class="cle">En 2027</span><span class="valeur">4 sessions</span></div>
-      <div class="repere reveal d5"><span class="cle">Chiffre d’affaires</span><span class="valeur">112 000 €</span></div>
+      <div class="repere reveal d5"><span class="cle">Chiffre d’affaires</span><span class="valeur">112 000 € TTC</span></div>
       <div class="repere reveal d6"><span class="cle">Marchés</span><span class="valeur">Anglo-saxon<br>et polonais</span></div>
     </div>
     <div class="filet-pied court filet d4"></div>
-    <p class="mention reveal d5">Mas Heyrauds, à Ménerbes, dans le Luberon.</p>
-    <p class="numero reveal d5">02 / 20</p>
+    <p class="mention reveal d5">Mas Heyrauds, à Ménerbes, dans le Luberon. Société à immatriculer à l’automne 2026.</p>
+    <p class="numero reveal d5">02 / 21</p>
   </section>
 
   <!-- ========== 03 · BASCULE — L’ÉQUIPE ========== -->
@@ -346,7 +346,7 @@ body.mode-edition .edit-aide{display:block}
     <p class="sect-chapo reveal d3">Deux parcours qui se complètent : l’opérationnel et le terrain d’un côté,
       le commerce et la gestion de l’autre.</p>
     <div class="filet-pied filet d3"></div>
-    <p class="numero reveal d4">03 / 20</p>
+    <p class="numero reveal d4">03 / 21</p>
   </section>
 
   <!-- ========== 04 · JULIEN & PAULINA ========== -->
@@ -384,30 +384,31 @@ body.mode-edition .edit-aide{display:block}
     </div>
     <div class="filet-pied filet d6"></div>
     <p class="mention reveal d7">Paulina porte le projet et reste l’interlocutrice des participantes.</p>
-    <p class="numero reveal d7">04 / 20</p>
+    <p class="numero reveal d7">04 / 21</p>
   </section>
 
   <!-- ========== 05 · POURQUOI CE PROJET ========== -->
   <section class="slide s-ivoire">
-    <p class="surtitre reveal d1">L’équipe</p>
+    <p class="surtitre reveal d1">Origine du projet</p>
     <div class="filet-entete filet d1"></div>
     <blockquote class="citation encrer d2" style="top:296px">« Nous nous sommes rencontrés en Angleterre.
       Paulina est tombée amoureuse de la Provence et s’y est installée. Nous voulons la faire découvrir,
       et donner à des femmes l’envie de voyager seules, en confiance. »</blockquote>
-    <p class="signature reveal d4" style="top:866px">Julien &amp; Paulina</p>
+    <p class="signature reveal d4" style="top:858px">Julien &amp; Paulina</p>
     <div class="filet-pied filet d4"></div>
-    <p class="numero reveal d5">05 / 20</p>
+    <p class="mention reveal d5">Paulina coordonne des retraites en Provence depuis un an, pour des structures concurrentes.</p>
+    <p class="numero reveal d5">05 / 21</p>
   </section>
 
   <!-- ========== 06 · LE CONCEPT ========== -->
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Le concept</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre encrer d2" style="font-size:88px">Sept jours, six nuits, huit femmes</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Sept jours, six nuits, huit participantes</h2>
     <div class="trio" style="top:496px">
       <div class="volet reveal d3"><span class="cle">Le lieu</span>
-        <p>Le Mas Heyrauds, à Ménerbes. Un choix parmi des dizaines de mas équivalents : le lieu sert la
-          communication, il ne fait pas la différence.</p></div>
+        <p>Mas Heyrauds, à Ménerbes. Retenu parmi des dizaines de mas équivalents à budget comparable.
+          Le lieu sert l’image, il ne porte pas la différenciation.</p></div>
       <div class="volet reveal d4"><span class="cle">Le fil rouge</span>
         <p>Le chef cuisine avec les participantes, à partir des produits achetés le matin même au marché.</p></div>
       <div class="volet reveal d5"><span class="cle">Ce qui reste après</span>
@@ -415,7 +416,7 @@ body.mode-edition .edit-aide{display:block}
     </div>
     <div class="filet-pied filet d5"></div>
     <p class="mention reveal d6">Paulina coordonne la semaine en personne et conduit le van de neuf places.</p>
-    <p class="numero reveal d6">06 / 20</p>
+    <p class="numero reveal d6">06 / 21</p>
   </section>
 
   <!-- ========== 07 · CE QUI NOUS DIFFÉRENCIE ========== -->
@@ -424,22 +425,22 @@ body.mode-edition .edit-aide{display:block}
     <div class="bord-aplat"></div>
     <p class="surtitre reveal d1">Le concept</p>
     <div class="filet-entete court filet d1"></div>
-    <h2 class="titre court encrer d2" style="font-size:84px">Ce que personne d’autre <em>ne fait</em></h2>
+    <h2 class="titre court encrer d2" style="font-size:80px">Un positionnement<br><em>que la concurrence n’occupe pas</em></h2>
     <ul class="liste" style="position:absolute;left:140px;top:512px;width:1080px">
-      <li class="reveal d3" style="font-size:27px">Aucun concurrent ne construit <strong>une semaine
-        entière</strong> autour de la cuisine comme fil conducteur.</li>
-      <li class="reveal d4" style="font-size:27px">Aucun ne s’adresse au <strong>marché polonais</strong>,
+      <li class="reveal d3" style="font-size:26px">Aucun des <strong>huit concurrents étudiés</strong> ne
+        construit une semaine entière autour de la cuisine comme fil conducteur.</li>
+      <li class="reveal d4" style="font-size:26px">Aucun ne s’adresse au <strong>marché polonais</strong>
         ni ne produit de contenu dans cette langue.</li>
-      <li class="reveal d5" style="font-size:27px">Le format se reproduit sur d’autres passions : la
-        gastronomie n’est que <strong>la première thématique</strong>.</li>
+      <li class="reveal d5" style="font-size:26px">Le format se reproduit sur d’autres thématiques
+        <strong>sans modifier la structure de coûts</strong>.</li>
     </ul>
     <div class="colonne" style="top:470px">
       <div class="repere reveal d4"><span class="cle">Le vrai concept</span>
         <span class="valeur" style="font-size:34px">Fédérer un groupe de femmes autour d’une passion</span>
-        <span class="note">Le repos, le spa et le luxe du lieu ne sont pas le sujet.</span></div>
+        <span class="note">Le repos et le spa sont des standards du secteur. Ils ne constituent pas un avantage.</span></div>
     </div>
     <div class="filet-pied court filet d5"></div>
-    <p class="numero reveal d6">07 / 20</p>
+    <p class="numero reveal d6">07 / 21</p>
   </section>
 
   <!-- ========== 08 · BASCULE — LE MARCHÉ ========== -->
@@ -450,7 +451,7 @@ body.mode-edition .edit-aide{display:block}
     <p class="sect-chapo reveal d3">Un marché anglo-saxon mature où la demande est prouvée, un marché polonais
       émergent où personne n’est encore positionné sur la Provence.</p>
     <div class="filet-pied filet d3"></div>
-    <p class="numero reveal d4">08 / 20</p>
+    <p class="numero reveal d4">08 / 21</p>
   </section>
 
   <!-- ========== 09 · DEUX MARCHÉS ========== -->
@@ -466,8 +467,8 @@ body.mode-edition .edit-aide{display:block}
         <ul class="liste">
           <li class="reveal d4">L’offre existante reste concentrée sur un registre <strong>yoga et spa
             générique</strong>.</li>
-          <li class="reveal d5">La place à prendre n’est pas « il n’y a personne », c’est
-            <strong>« personne ne fait ce que nous faisons »</strong>.</li>
+          <li class="reveal d5">La demande est établie ; <strong>l’offre ne l’est pas</strong> sur le
+            créneau thématique.</li>
           <li class="reveal d6">Ciblage de communautés de passionnés : cuisine, vin, naturopathie.</li>
         </ul>
       </div>
@@ -479,32 +480,34 @@ body.mode-edition .edit-aide{display:block}
           <li class="reveal d5">Diaspora au Royaume-Uni, en France et en Allemagne, au pouvoir d’achat plus
             élevé.</li>
           <li class="reveal d6">Polonaises urbaines, sur un marché dont le pouvoir d’achat progresse.</li>
-          <li class="reveal d7">Contenu <strong>100 % en polonais</strong> : un positionnement sans équivalent
+          <li class="reveal d7">Contenu <strong>100 % en polonais</strong> : un positionnement sans équivalent
             en Provence.</li>
         </ul>
       </div>
     </div>
     <div class="filet-pied filet d6"></div>
-    <p class="numero reveal d7">09 / 20</p>
+    <p class="numero reveal d7">09 / 21</p>
   </section>
 
   <!-- ========== 10 · LES SIGNAUX ========== -->
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Le marché</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre encrer d2" style="font-size:88px">Quatre signaux qui portent le calendrier</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Quatre indicateurs de marché</h2>
     <div class="quatuor" style="top:516px">
-      <div class="chiffre jumbo-in d3"><span class="valeur">64 %</span>
-        <p>du marché mondial du tourisme bien-être est féminin.<br>Global Wellness Institute</p></div>
-      <div class="chiffre jumbo-in d4"><span class="valeur">+ 195 %</span>
-        <p>de recherches « retraite poterie » en un an aux États-Unis.</p></div>
-      <div class="chiffre jumbo-in d5"><span class="valeur">+ 20 %</span>
+      <div class="chiffre jumbo-in d3"><span class="valeur">64 %</span>
+        <p>du marché mondial du tourisme bien-être est féminin.<br>Source : Global Wellness Institute</p></div>
+      <div class="chiffre jumbo-in d4"><span class="valeur">+ 195 %</span>
+        <p>de recherches « retraite poterie » en un an aux États-Unis. Indice du glissement vers les
+          séjours thématiques.</p></div>
+      <div class="chiffre jumbo-in d5"><span class="valeur">+ 20 %</span>
         <p>de croissance annuelle attendue pour le tourisme culinaire polonais.</p></div>
       <div class="chiffre jumbo-in d6"><span class="valeur">2027</span>
         <p>ouverture de la ligne aérienne directe Marseille — New York.</p></div>
     </div>
     <div class="filet-pied filet d6"></div>
-    <p class="numero reveal d7">10 / 20</p>
+    <p class="mention reveal d7">Les deux premiers indicateurs cadrent la demande, les deux suivants l’accès au marché.</p>
+    <p class="numero reveal d7">10 / 21</p>
   </section>
 
   <!-- ========== 11 · LA CONCURRENCE ========== -->
@@ -512,50 +515,50 @@ body.mode-edition .edit-aide{display:block}
     <p class="surtitre reveal d1">La concurrence</p>
     <div class="filet-entete filet d1"></div>
     <h2 class="titre encrer d2" style="font-size:76px;top:174px">Un prix d’entrée sur le segment actif</h2>
-    <p class="chapo reveal d2" style="top:284px;width:1200px;font-size:21px">Prix par nuit en chambre
-      individuelle, du moins cher au plus cher.</p>
+    <p class="chapo reveal d2" style="top:284px;width:1300px;font-size:21px">Prix par nuit en chambre
+      individuelle. Huit concurrents étudiés, classés du moins cher au plus cher.</p>
     <div class="graphe" style="top:352px">
-      <div class="ligne-graphe reveal d3"><div class="nom"><b>Core Retreat</b><span>3 nuits · 950 €</span></div>
-        <div class="piste"><div class="barre-fill barre d3" style="width:190px"></div><span class="val">317 €</span></div></div>
-      <div class="ligne-graphe nous reveal d3"><div class="nom"><b>Les Provençales</b><span>6 nuits · 3 500 €</span></div>
-        <div class="piste"><div class="barre-fill barre d4" style="width:350px"></div><span class="val">583 €</span></div></div>
-      <div class="ligne-graphe reveal d4"><div class="nom"><b>Club Garrigue</b><span>6 nuits · 3 700 €</span></div>
-        <div class="piste"><div class="barre-fill barre d5" style="width:370px"></div><span class="val">617 €</span></div></div>
-      <div class="ligne-graphe reveal d5"><div class="nom"><b>Well in France</b><span>4 nuits · 2 850 €</span></div>
-        <div class="piste"><div class="barre-fill barre d6" style="width:428px"></div><span class="val">713 €</span></div></div>
-      <div class="ligne-graphe reveal d6"><div class="nom"><b>Best French Forever</b><span>5 nuits · 5 000 €</span></div>
-        <div class="piste"><div class="barre-fill barre d7" style="width:600px"></div><span class="val">1 000 €</span></div></div>
-      <div class="ligne-graphe reveal d7"><div class="nom"><b>The Provence Retreat</b><span>5 nuits · 5 750 €</span></div>
-        <div class="piste"><div class="barre-fill barre d8" style="width:690px"></div><span class="val">1 150 €</span></div></div>
-      <div class="ligne-graphe reveal d8"><div class="nom"><b>La Bastide de Laurence</b><span>4 nuits · 5 400 €</span></div>
-        <div class="piste"><div class="barre-fill barre d9" style="width:810px"></div><span class="val">1 350 €</span></div></div>
-      <div class="ligne-graphe reveal d9"><div class="nom"><b>Gallivant &amp; Gather</b><span>7 nuits · 9 750 €</span></div>
-        <div class="piste"><div class="barre-fill barre d10" style="width:836px"></div><span class="val">1 393 €</span></div></div>
-      <div class="ligne-graphe reveal d10"><div class="nom"><b>Madame de la Maison</b><span>5 nuits · 7 500 €</span></div>
-        <div class="piste"><div class="barre-fill barre d11" style="width:900px"></div><span class="val">1 500 €</span></div></div>
+      <div class="ligne-graphe reveal d3"><div class="nom"><b>Core Retreat</b><span>3 nuits · 950 €</span></div>
+        <div class="piste"><div class="barre-fill barre d3" style="width:190px"></div><span class="val">317 €</span></div></div>
+      <div class="ligne-graphe nous reveal d3"><div class="nom"><b>Les Provençales</b><span>6 nuits · 3 500 €</span></div>
+        <div class="piste"><div class="barre-fill barre d4" style="width:350px"></div><span class="val">583 €</span></div></div>
+      <div class="ligne-graphe reveal d4"><div class="nom"><b>Club Garrigue</b><span>6 nuits · 3 700 €</span></div>
+        <div class="piste"><div class="barre-fill barre d5" style="width:370px"></div><span class="val">617 €</span></div></div>
+      <div class="ligne-graphe reveal d5"><div class="nom"><b>Well in France</b><span>4 nuits · 2 850 €</span></div>
+        <div class="piste"><div class="barre-fill barre d6" style="width:428px"></div><span class="val">713 €</span></div></div>
+      <div class="ligne-graphe reveal d6"><div class="nom"><b>Best French Forever</b><span>5 nuits · 5 000 €</span></div>
+        <div class="piste"><div class="barre-fill barre d7" style="width:600px"></div><span class="val">1 000 €</span></div></div>
+      <div class="ligne-graphe reveal d7"><div class="nom"><b>The Provence Retreat</b><span>5 nuits · 5 750 €</span></div>
+        <div class="piste"><div class="barre-fill barre d8" style="width:690px"></div><span class="val">1 150 €</span></div></div>
+      <div class="ligne-graphe reveal d8"><div class="nom"><b>La Bastide de Laurence</b><span>4 nuits · 5 400 €</span></div>
+        <div class="piste"><div class="barre-fill barre d9" style="width:810px"></div><span class="val">1 350 €</span></div></div>
+      <div class="ligne-graphe reveal d9"><div class="nom"><b>Gallivant &amp; Gather</b><span>7 nuits · 9 750 €</span></div>
+        <div class="piste"><div class="barre-fill barre d10" style="width:836px"></div><span class="val">1 393 €</span></div></div>
+      <div class="ligne-graphe reveal d10"><div class="nom"><b>Madame de la Maison</b><span>5 nuits · 7 500 €</span></div>
+        <div class="piste"><div class="barre-fill barre d11" style="width:900px"></div><span class="val">1 500 €</span></div></div>
     </div>
     <div class="filet-pied filet d10"></div>
-    <p class="mention reveal d11">Juste sous Club Garrigue, très loin du bloc premium passif à 1 000 – 1 500 € la nuit.</p>
-    <p class="numero reveal d11">11 / 20</p>
+    <p class="mention reveal d11">Positionné sous le seul concurrent au format comparable, à moins de la moitié du bloc premium.</p>
+    <p class="numero reveal d11">11 / 21</p>
   </section>
 
   <!-- ========== 12 · LE MODÈLE ÉCONOMIQUE ========== -->
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Les chiffres</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre encrer d2" style="font-size:88px">Le modèle, session par session</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Le modèle à remplissage complet</h2>
     <table class="tableau" style="top:400px">
-      <tr><th>Hypothèse : 3 500 € par participante</th>
+      <tr><th>Hypothèse haute : 8 places vendues sur 8</th>
         <th class="n">1 session</th><th class="n">Année 1 · 4 sessions</th></tr>
-      <tr class="reveal d3"><td>Chiffre d’affaires TTC</td><td class="n">28 000 €</td><td class="n">112 000 €</td></tr>
-      <tr class="reveal d4"><td>Chiffre d’affaires HT</td><td class="n">23 333 €</td><td class="n">93 333 €</td></tr>
-      <tr class="reveal d5"><td>Coûts HT</td><td class="n">17 110 €</td><td class="n">68 440 €</td></tr>
-      <tr class="reveal d6"><td>Marge avant impôt</td><td class="n">6 223 €</td><td class="n">24 893 €</td></tr>
-      <tr class="total reveal d7"><td>Marge nette après impôt</td><td class="n">5 290 €</td><td class="n">21 159 €</td></tr>
+      <tr class="reveal d3"><td>Chiffre d’affaires TTC</td><td class="n">28 000 €</td><td class="n">112 000 €</td></tr>
+      <tr class="reveal d4"><td>Chiffre d’affaires HT</td><td class="n">23 333 €</td><td class="n">93 333 €</td></tr>
+      <tr class="reveal d5"><td>Coûts HT</td><td class="n">17 110 €</td><td class="n">68 440 €</td></tr>
+      <tr class="reveal d6"><td>Marge avant impôt</td><td class="n">6 223 €</td><td class="n">24 893 €</td></tr>
+      <tr class="total reveal d7"><td>Marge nette après impôt</td><td class="n">5 290 €</td><td class="n">21 159 €</td></tr>
     </table>
     <div class="filet-pied filet d7"></div>
-    <p class="mention reveal d8">Tarif identique sur les quatre sessions. Impôt sur les sociétés à 15 %.</p>
-    <p class="numero reveal d8">12 / 20</p>
+    <p class="mention reveal d8">Tarif identique sur les quatre sessions. TVA à 20 %, impôt sur les sociétés à 15 %. Marge nette : 22,7 % du chiffre d’affaires hors taxes.</p>
+    <p class="numero reveal d8">12 / 21</p>
   </section>
 
   <!-- ========== 13 · LES POSTES DE COÛTS ========== -->
@@ -564,25 +567,60 @@ body.mode-edition .edit-aide{display:block}
     <div class="bord-aplat"></div>
     <p class="surtitre reveal d1">Les chiffres</p>
     <div class="filet-entete court filet d1"></div>
-    <h2 class="titre court encrer d2" style="font-size:88px">Où part l’argent d’une session</h2>
+    <h2 class="titre court encrer d2" style="font-size:88px">Structure de coûts d’une session</h2>
     <table class="tableau" style="top:400px;width:1120px">
-      <tr class="reveal d3"><td>Le lieu</td><td class="n">8 000 €</td></tr>
-      <tr class="reveal d4"><td>Restauration et chef</td><td class="n">5 180 €</td></tr>
-      <tr class="reveal d5"><td>Ateliers cuisine et naturopathie</td><td class="n">1 333 €</td></tr>
-      <tr class="reveal d6"><td>Frais bancaires et assurance</td><td class="n">1 136 €</td></tr>
-      <tr class="reveal d7"><td>Transport en van</td><td class="n">617 €</td></tr>
-      <tr class="total reveal d8"><td>Coûts totaux de la session</td><td class="n">17 110 €</td></tr>
+      <tr class="reveal d3"><td>Le lieu</td><td class="n">8 000 €</td></tr>
+      <tr class="reveal d4"><td>Restauration et chef</td><td class="n">5 180 €</td></tr>
+      <tr class="reveal d5"><td>Ateliers cuisine et naturopathie</td><td class="n">1 333 €</td></tr>
+      <tr class="reveal d6"><td>Frais bancaires et assurance</td><td class="n">1 136 €</td></tr>
+      <tr class="reveal d7"><td>Transport en van</td><td class="n">617 €</td></tr>
+      <tr class="total reveal d8"><td>Coûts totaux de la session</td><td class="n">17 110 €</td></tr>
     </table>
     <div class="colonne" style="top:400px">
       <div class="repere reveal d5"><span class="cle">Principaux postes</span>
-        <span class="valeur">16 266 €</span>
-        <span class="note">sur 17 110 € de coûts totaux. Le lieu pèse à lui seul près de la moitié.</span></div>
+        <span class="valeur">16 266 €</span>
+        <span class="note">sur 17 110 € de coûts totaux. Le lieu représente 47 % des coûts et reste dû quel que soit le remplissage.</span></div>
       <div class="repere reveal d7"><span class="cle">Marge nette</span>
-        <span class="valeur">5 290 €</span>
+        <span class="valeur">5 290 €</span>
         <span class="note">par session, après impôt sur les sociétés.</span></div>
     </div>
     <div class="filet-pied court filet d8"></div>
-    <p class="numero reveal d9">13 / 20</p>
+    <p class="numero reveal d9">13 / 21</p>
+  </section>
+
+  <!-- ========== 14 · POINT MORT ET SENSIBILITÉ ========== -->
+  <section class="slide s-ivoire">
+    <div class="aplat pan"></div>
+    <div class="bord-aplat"></div>
+    <p class="surtitre reveal d1">Les chiffres</p>
+    <div class="filet-entete court filet d1"></div>
+    <h2 class="titre court encrer d2" style="font-size:88px">Le point mort est atteint<br><em>à six places sur huit</em></h2>
+    <table class="tableau" style="top:396px;width:1120px">
+      <tr><th style="width:380px">Places vendues par session</th>
+        <th class="n" style="width:370px">Marge nette par session</th>
+        <th class="n" style="width:370px">Marge nette de l’année</th></tr>
+      <tr class="reveal d3"><td style="width:380px">8 sur 8</td>
+        <td class="n" style="width:370px">5 290 €</td><td class="n" style="width:370px">21 159 €</td></tr>
+      <tr class="reveal d4"><td style="width:380px">7 sur 8</td>
+        <td class="n" style="width:370px">2 811 €</td><td class="n" style="width:370px">11 243 €</td></tr>
+      <tr class="reveal d5"><td style="width:380px;color:var(--grenat);font-weight:600">6 sur 8</td>
+        <td class="n" style="width:370px;color:var(--grenat)">332 €</td>
+        <td class="n" style="width:370px;color:var(--grenat)">1 326 €</td></tr>
+      <tr class="reveal d6"><td style="width:380px">5 sur 8</td>
+        <td class="n" style="width:370px">− 2 527 €</td><td class="n" style="width:370px">− 10 107 €</td></tr>
+    </table>
+    <div class="colonne" style="top:396px">
+      <div class="repere reveal d4"><span class="cle">Point mort</span>
+        <span class="valeur">5,9 places</span>
+        <span class="note">Il faut vendre six places sur huit pour couvrir les coûts d’une session.</span></div>
+      <div class="repere reveal d6"><span class="cle">Hypothèses</span>
+        <span class="valeur" style="font-size:34px">Tous les coûts tenus pour fixes</span>
+        <span class="note">Une part de la restauration varie en réalité avec le nombre de participantes :
+          le point mort réel est un peu plus bas.</span></div>
+    </div>
+    <div class="filet-pied court filet d6"></div>
+    <p class="mention reveal d7">Recette hors taxes par participante : 2 917 €. Coûts d’une session : 17 110 €.</p>
+    <p class="numero reveal d7">14 / 21</p>
   </section>
 
   <!-- ========== 14 · L’ÉTAT D’AVANCEMENT ========== -->
@@ -607,7 +645,7 @@ body.mode-edition .edit-aide{display:block}
           C’est une preuve d’exécution, pas une compétence déclarée.</span></div>
     </div>
     <div class="filet-pied court filet d8"></div>
-    <p class="numero reveal d9">14 / 20</p>
+    <p class="numero reveal d9">15 / 21</p>
   </section>
 
   <!-- ========== 15 · LE PLAN DE DÉPLOIEMENT ========== -->
@@ -634,7 +672,7 @@ body.mode-edition .edit-aide{display:block}
     </div>
     <div class="filet-pied filet d9"></div>
     <p class="mention reveal d10">Un débrief est prévu dès octobre 2027, juste après le pilote.</p>
-    <p class="numero reveal d10">15 / 20</p>
+    <p class="numero reveal d10">16 / 21</p>
   </section>
 
   <!-- ========== 16 · BASCULE — LA DEMANDE ========== -->
@@ -645,57 +683,59 @@ body.mode-edition .edit-aide{display:block}
     <p class="sect-chapo reveal d3">Un besoin de trésorerie ponctuel, destiné aux acomptes de réservation
       des quatre sessions de 2027.</p>
     <div class="filet-pied filet d3"></div>
-    <p class="numero reveal d4">16 / 20</p>
+    <p class="numero reveal d4">17 / 21</p>
   </section>
 
-  <!-- ========== 17 · 15 189 € ========== -->
+  <!-- ========== 17 · 15 189 € ========== -->
   <section class="slide s-ivoire">
     <div class="aplat pan"></div>
     <div class="bord-aplat"></div>
     <p class="surtitre reveal d1">La demande</p>
     <div class="filet-entete court filet d1"></div>
-    <h2 class="titre court encrer d2" style="font-size:88px">Un besoin de 15 189 €</h2>
+    <h2 class="titre court encrer d2" style="font-size:88px">Un besoin de 15 189 €</h2>
     <div class="duo serre" style="top:376px">
       <div class="col">
         <span class="col-role reveal d3">D’où vient l’argent</span>
         <div class="col-filet filet d3"></div>
         <table class="tableau" style="position:relative;left:0;top:0;width:520px">
-          <tr class="reveal d4"><td style="width:300px;font-size:22px">Apport personnel</td><td class="n" style="font-size:30px;width:220px">2 000 €</td></tr>
-          <tr class="reveal d5"><td style="width:300px;font-size:22px">Prêt d’honneur — Julien</td><td class="n" style="font-size:30px;width:220px">6 595 €</td></tr>
-          <tr class="reveal d6"><td style="width:300px;font-size:22px">Prêt d’honneur — Paulina</td><td class="n" style="font-size:30px;width:220px">6 594 €</td></tr>
+          <tr class="reveal d4"><td style="width:300px;font-size:22px">Apport personnel</td><td class="n" style="font-size:30px;width:220px">2 000 €</td></tr>
+          <tr class="reveal d5"><td style="width:300px;font-size:22px">Prêt d’honneur — Julien</td><td class="n" style="font-size:30px;width:220px">6 595 €</td></tr>
+          <tr class="reveal d6"><td style="width:300px;font-size:22px">Prêt d’honneur — Paulina</td><td class="n" style="font-size:30px;width:220px">6 594 €</td></tr>
         </table>
       </div>
       <div class="col">
         <span class="col-role reveal d3">À quoi il sert</span>
         <div class="col-filet filet d4"></div>
         <table class="tableau" style="position:relative;left:0;top:0;width:520px">
-          <tr class="reveal d5"><td style="width:320px;font-size:22px">Acomptes du lieu</td><td class="n" style="font-size:30px;width:200px">9 600 €</td></tr>
-          <tr class="reveal d6"><td style="width:320px;font-size:22px">Marketing de lancement</td><td class="n" style="font-size:30px;width:200px">2 500 €</td></tr>
-          <tr class="reveal d7"><td style="width:320px;font-size:22px">Acomptes prestataires</td><td class="n" style="font-size:30px;width:200px">1 050 €</td></tr>
-          <tr class="reveal d8"><td style="width:320px;font-size:22px">Marque, site, digital</td><td class="n" style="font-size:30px;width:200px">930 €</td></tr>
-          <tr class="reveal d9"><td style="width:320px;font-size:22px">Juridique et comptabilité</td><td class="n" style="font-size:30px;width:200px">809 €</td></tr>
-          <tr class="reveal d10"><td style="width:320px;font-size:22px">Frais commerciaux</td><td class="n" style="font-size:30px;width:200px">300 €</td></tr>
+          <tr class="reveal d5"><td style="width:320px;font-size:22px">Acomptes du lieu</td><td class="n" style="font-size:30px;width:200px">9 600 €</td></tr>
+          <tr class="reveal d6"><td style="width:320px;font-size:22px">Marketing de lancement</td><td class="n" style="font-size:30px;width:200px">2 500 €</td></tr>
+          <tr class="reveal d7"><td style="width:320px;font-size:22px">Acomptes prestataires</td><td class="n" style="font-size:30px;width:200px">1 050 €</td></tr>
+          <tr class="reveal d8"><td style="width:320px;font-size:22px">Marque, site, digital</td><td class="n" style="font-size:30px;width:200px">930 €</td></tr>
+          <tr class="reveal d9"><td style="width:320px;font-size:22px">Juridique et comptabilité</td><td class="n" style="font-size:30px;width:200px">809 €</td></tr>
+          <tr class="reveal d10"><td style="width:320px;font-size:22px">Frais commerciaux</td><td class="n" style="font-size:30px;width:200px">300 €</td></tr>
         </table>
       </div>
     </div>
     <div class="colonne" style="top:376px">
       <div class="repere reveal d5"><span class="cle">Sollicité en prêt d’honneur</span>
-        <span class="valeur" style="font-size:64px;color:var(--grenat)">13 189 €</span>
-        <span class="note">Deux demandes individuelles, après 2 000 € d’apport personnel.</span></div>
+        <span class="valeur" style="font-size:64px;color:var(--grenat)">13 189 €</span>
+        <span class="note">Deux demandes individuelles, après 2 000 € d’apport personnel.</span></div>
     </div>
     <div class="filet-pied court filet d9"></div>
-    <p class="numero reveal d10">17 / 20</p>
+    <p class="mention reveal d10">Les acomptes du lieu représentent 63 % du besoin et conditionnent la réservation des quatre sessions.</p>
+    <p class="numero reveal d10">18 / 21</p>
   </section>
 
   <!-- ========== 18 · REMBOURSEMENT ========== -->
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">La demande</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre encrer d2" style="font-size:88px">Remboursé sur l’année de lancement</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">La marge 2027 couvre 1,6 fois l’emprunt</h2>
     <div class="heros jumbo-in d3" style="top:424px">
-      <span class="valeur">21 159 €</span>
-      <p class="quoi">de marge nette la première année, pour 13 189 € empruntés. Le prêt se rembourse sur
-        les résultats de 2027, et dégage un surplus pour financer la montée en cadence de 2028.</p>
+      <span class="valeur">21 159 €</span>
+      <p class="quoi">de marge nette en 2027 à remplissage complet, pour 13 189 € empruntés.
+        À sept places sur huit, la marge de l’année en couvre 0,85 fois : le remboursement s’étale
+        alors sur deux exercices.</p>
     </div>
     <div class="volet reveal d5" style="position:absolute;left:1180px;top:424px;width:600px">
       <span class="cle">Pourquoi maintenant</span>
@@ -703,28 +743,29 @@ body.mode-edition .edit-aide{display:block}
         positionnées sur le calendrier 2027. C’est un besoin de trésorerie ponctuel, pas structurel.</p>
     </div>
     <div class="filet-pied filet d6"></div>
-    <p class="numero reveal d6">18 / 20</p>
+    <p class="mention reveal d6">Le besoin finance des acomptes de réservation, pas un déficit d’exploitation.</p>
+    <p class="numero reveal d6">19 / 21</p>
   </section>
 
   <!-- ========== 19 · RISQUES ET RÉPONSES ========== -->
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Les risques</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre encrer d2" style="font-size:88px">Ce qui peut manquer, et ce que nous opposons</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Risques identifiés et mesures</h2>
     <div class="risques" style="top:400px">
-      <div class="risque reveal d3"><p class="quoi">Aucun retour client avant le pilote</p>
-        <p class="reponse">Paulina coordonne depuis un an des retraites pour des structures concurrentes.
-          <b>L’exécution est déjà éprouvée</b>, sur ce métier précis et sur ce territoire.</p></div>
-      <div class="risque reveal d4"><p class="quoi">Dépendance à un lieu unique</p>
-        <p class="reponse">Des dizaines de mas équivalents sont disponibles dans le Luberon.
-          <b>Le lieu n’est pas le différenciant</b> : l’expérience l’est.</p></div>
-      <div class="risque reveal d5"><p class="quoi">Une équipe de deux personnes</p>
-        <p class="reponse">Huit participantes par session et des prestataires locaux.
-          <b>Le format est dimensionné pour deux</b>, pas étiré pour tenir.</p></div>
+      <div class="risque reveal d3"><p class="quoi">Le remplissage des quatre sessions</p>
+        <p class="reponse"><b>Le point mort est à six places sur huit.</b> Le prix d’entrée du segment
+          et l’ouverture de deux marchés élargissent la base de prospects.</p></div>
+      <div class="risque reveal d4"><p class="quoi">Aucun retour client avant le pilote</p>
+        <p class="reponse">Paulina coordonne depuis un an des retraites pour des structures concurrentes,
+          sur ce métier et sur ce territoire. <b>L’exécution est déjà éprouvée.</b></p></div>
+      <div class="risque reveal d5"><p class="quoi">Dépendance à un lieu unique</p>
+        <p class="reponse">Des dizaines de mas équivalents sont disponibles dans le Luberon à budget
+          comparable. <b>Le lieu n’est pas le différenciant.</b></p></div>
     </div>
     <div class="filet-pied filet d5"></div>
-    <p class="mention reveal d6">Le secteur reste sensible aux chocs économiques : c’est la raison du prix d’entrée.</p>
-    <p class="numero reveal d6">19 / 20</p>
+    <p class="mention reveal d6">L’équipe se limite à deux personnes : huit participantes et des prestataires locaux dimensionnent le format en conséquence.</p>
+    <p class="numero reveal d6">20 / 21</p>
   </section>
 
   <!-- ========== 20 · CONCLUSION ========== -->
@@ -733,20 +774,20 @@ body.mode-edition .edit-aide{display:block}
     <div class="couv-bord"></div>
     <div class="trait-grenat filet d1"></div>
     <p class="couv-surtitre reveal d2">En conclusion</p>
-    <blockquote class="citation encrer d3" style="top:428px;width:1060px;font-size:64px">Le lieu, l’équipe,
-      le calendrier et les chiffres sont posés. Il ne manque que votre soutien pour ouvrir la première
-      session en septembre 2027.</blockquote>
+    <blockquote class="citation encrer d3" style="top:428px;width:1060px;font-size:62px">Le lieu, l’équipe,
+      le calendrier et le prévisionnel sont établis. Le prêt d’honneur débloque les acomptes et permet
+      d’ouvrir les réservations en décembre 2026.</blockquote>
     <img class="couv-logo reveal d5" src="__LOGO__" alt="Les Provençales">
     <p class="couv-pied reveal d6">Julien &amp; Paulina</p>
     <div class="couv-colonne" style="top:392px">
       <div class="repere reveal d4"><span class="cle">Sollicité</span>
-        <span class="valeur" style="color:var(--grenat)">13 189 €</span>
+        <span class="valeur" style="color:var(--grenat)">13 189 €</span>
         <span class="note">en prêt d’honneur, deux demandes individuelles.</span></div>
       <div class="repere reveal d5"><span class="cle">Si accord</span>
         <span class="valeur" style="font-size:34px">Réservation des 4 sessions dans la semaine</span>
         <span class="note">Ouverture des ventes dès décembre 2026.</span></div>
     </div>
-    <p class="couv-date reveal d6">20 / 20</p>
+    <p class="couv-date reveal d6">21 / 21</p>
   </section>
 
   </main>
