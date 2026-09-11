@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Les Provençales — Comité d’agrément</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Polices intégrées au fichier : le deck ne dépend d’aucun réseau. */
+__FONTS_IVOIRE__
+</style>
 <style>
 /* ===========================================================
    LES PROVENÇALES — DECK COMITÉ D’AGRÉMENT
@@ -132,7 +133,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
 .couv-surtitre{position:absolute;left:var(--marge);top:368px;font-family:var(--sans);font-weight:500;
   font-size:20px;letter-spacing:.17em;color:var(--grenat)}
 .couv-titre{position:absolute;left:var(--marge);top:428px;width:1700px;font-family:var(--serif);
-  font-weight:300;font-size:156px;line-height:1.04;color:var(--encre);z-index:3}
+  font-weight:300;font-size:178px;line-height:1.02;color:var(--encre);z-index:3}
 .couv-titre em{font-style:italic;font-weight:300}
 .couv-chapo{position:absolute;left:var(--marge);top:806px;width:900px;font-family:var(--sans);
   font-weight:400;font-size:27px;line-height:1.6;color:var(--encre-douce)}
@@ -150,8 +151,8 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
   font-weight:300;font-size:48px;color:var(--or);letter-spacing:.06em}
 .s-encre .sect-filet{position:absolute;left:var(--marge);top:392px;width:1640px;height:1px;
   background:rgba(217,164,65,.45)}
-.s-encre .sect-titre{position:absolute;left:var(--marge);top:436px;width:1500px;font-family:var(--serif);
-  font-weight:300;font-size:150px;line-height:1.02;color:var(--ivoire)}
+.s-encre .sect-titre{position:absolute;left:var(--marge);top:430px;width:1620px;font-family:var(--serif);
+  font-weight:300;font-size:166px;line-height:1.02;color:var(--ivoire)}
 .s-encre .sect-titre em{font-style:italic;font-weight:300;color:var(--or)}
 .s-encre .sect-chapo{position:absolute;left:var(--marge);top:790px;width:1080px;font-family:var(--sans);
   font-weight:400;font-size:26px;line-height:1.62;color:rgba(245,234,217,.66)}
@@ -208,6 +209,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
   color:var(--or-fonce);border-bottom:1px solid var(--or)}
 .tableau td:first-child{font-family:var(--sans);font-weight:400;font-size:24px;color:var(--encre-douce);width:460px}
 .tableau td.n{font-family:var(--serif);font-weight:400;font-size:38px;color:var(--encre);
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum","tnum";
   text-align:right;width:350px}
 .tableau th.n{text-align:right}
 .tableau tr.total td{border-bottom:none;padding-top:26px}
