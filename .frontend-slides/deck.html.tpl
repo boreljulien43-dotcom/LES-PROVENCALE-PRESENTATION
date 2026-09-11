@@ -62,16 +62,29 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
    ANIMATIONS — sobres : fondu montant et filets qui se tracent
    Déclenchées par la classe .visible posée sur la slide active.
    =========================================================== */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .slide.visible .reveal{opacity:1;transform:none}
+/* Les titres se dévoilent par le bas, sans bouger le texte : le bloc s’ouvre. */
+.encrer{clip-path:inset(0 0 100% 0);transform:translateY(14px);
+  transition:clip-path .95s var(--ease),transform .95s var(--ease)}
+.slide.visible .encrer{clip-path:inset(0 0 0 0);transform:none}
 .filet{transform:scaleX(0);transform-origin:left center;transition:transform 1s var(--ease)}
 .slide.visible .filet{transform:scaleX(1)}
-.filet-v{transform:scaleY(0);transform-origin:top center;transition:transform 1.1s var(--ease)}
+.filet-v{transform:scaleY(0);transform-origin:top center;transition:transform 1s var(--ease)}
 .slide.visible .filet-v{transform:scaleY(1)}
-.pan{transform:translateX(560px);transition:transform 1.1s var(--ease)}
-.slide.visible .pan{transform:none}
-.barre{transform:scaleX(0);transform-origin:left center;transition:transform .9s var(--ease)}
+/* L’aplat se découvre depuis son bord droit, sans translation d’un bloc entier. */
+.pan{clip-path:inset(0 0 0 100%);transition:clip-path 1.1s var(--ease)}
+.slide.visible .pan{clip-path:inset(0 0 0 0)}
+/* Les grands chiffres montent et s’ouvrent légèrement. */
+.jumbo-in{opacity:0;transform:translateY(40px) scale(.94);
+  transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.slide.visible .jumbo-in{opacity:1;transform:none}
+.barre{transform:scaleX(0);transform-origin:left center;transition:transform .85s var(--ease)}
 .slide.visible .barre{transform:scaleX(1)}
+/* Une ligne de tableau ne se translate pas : le navigateur repeint toute la table.
+   Seule l’opacité varie, c’est ce qui rend l’enchaînement fluide. */
+.tableau tr.reveal,.slide.visible .tableau tr.reveal{transform:none}
+.tableau tr.reveal{transition:opacity .8s var(--ease)}
 .d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}
 .d5{transition-delay:.48s}.d6{transition-delay:.58s}.d7{transition-delay:.68s}.d8{transition-delay:.78s}
 .d9{transition-delay:.88s}.d10{transition-delay:.98s}.d11{transition-delay:1.08s}.d12{transition-delay:1.18s}
@@ -292,7 +305,7 @@ body.mode-edition .edit-aide{display:block}
     <div class="couv-bord"></div>
     <div class="trait-grenat filet d1"></div>
     <p class="couv-surtitre reveal d2">Comité d’agrément — Initiative Pays d’Aix</p>
-    <h1 class="couv-titre reveal d3">L’art de se retrouver,<br><em>en Provence</em></h1>
+    <h1 class="couv-titre encrer d3">L’art de se retrouver,<br><em>en Provence</em></h1>
     <p class="couv-chapo reveal d4">Des retraites féminines autour de la cuisine, du vin et de la
       naturopathie, dans le Luberon. Quatre sessions ouvertes en 2027.</p>
     <img class="couv-logo reveal d5" src="__LOGO__" alt="Les Provençales">
@@ -311,7 +324,7 @@ body.mode-edition .edit-aide{display:block}
     <div class="bord-aplat"></div>
     <p class="surtitre reveal d1">Le projet</p>
     <div class="filet-entete court filet d1"></div>
-    <h2 class="titre court reveal d2" style="font-size:100px">Huit femmes, une passion commune,
+    <h2 class="titre court encrer d2" style="font-size:100px">Huit femmes, une passion commune,
       <em>une semaine en Provence.</em></h2>
     <p class="chapo reveal d3" style="top:556px;width:1080px">La cuisine, le vin et la naturopathie sont
       la première thématique, pas la seule. Le format est pensé pour être reproduit.</p>
@@ -329,7 +342,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-encre">
     <p class="sect-num reveal d1">01</p>
     <div class="sect-filet filet d1"></div>
-    <h2 class="sect-titre reveal d2">Ceux qui portent<br><em>le projet</em></h2>
+    <h2 class="sect-titre encrer d2">Ceux qui portent<br><em>le projet</em></h2>
     <p class="sect-chapo reveal d3">Deux parcours qui se complètent : l’opérationnel et le terrain d’un côté,
       le commerce et la gestion de l’autre.</p>
     <div class="filet-pied filet d3"></div>
@@ -340,7 +353,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">L’équipe</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre reveal d2" style="font-size:88px">Deux parcours complémentaires</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Deux parcours complémentaires</h2>
     <div class="duo" style="top:400px">
       <div class="col">
         <p class="col-titre reveal d3">Julien</p>
@@ -378,7 +391,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">L’équipe</p>
     <div class="filet-entete filet d1"></div>
-    <blockquote class="citation reveal d2" style="top:296px">« Nous nous sommes rencontrés en Angleterre.
+    <blockquote class="citation encrer d2" style="top:296px">« Nous nous sommes rencontrés en Angleterre.
       Paulina est tombée amoureuse de la Provence et s’y est installée. Nous voulons la faire découvrir,
       et donner à des femmes l’envie de voyager seules, en confiance. »</blockquote>
     <p class="signature reveal d4" style="top:866px">Julien &amp; Paulina</p>
@@ -390,7 +403,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Le concept</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre reveal d2" style="font-size:88px">Sept jours, six nuits, huit femmes</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Sept jours, six nuits, huit femmes</h2>
     <div class="trio" style="top:496px">
       <div class="volet reveal d3"><span class="cle">Le lieu</span>
         <p>Le Mas Heyrauds, à Ménerbes. Un choix parmi des dizaines de mas équivalents : le lieu sert la
@@ -411,7 +424,7 @@ body.mode-edition .edit-aide{display:block}
     <div class="bord-aplat"></div>
     <p class="surtitre reveal d1">Le concept</p>
     <div class="filet-entete court filet d1"></div>
-    <h2 class="titre court reveal d2" style="font-size:84px">Ce que personne d’autre <em>ne fait</em></h2>
+    <h2 class="titre court encrer d2" style="font-size:84px">Ce que personne d’autre <em>ne fait</em></h2>
     <ul class="liste" style="position:absolute;left:140px;top:512px;width:1080px">
       <li class="reveal d3" style="font-size:27px">Aucun concurrent ne construit <strong>une semaine
         entière</strong> autour de la cuisine comme fil conducteur.</li>
@@ -433,7 +446,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-encre">
     <p class="sect-num reveal d1">02</p>
     <div class="sect-filet filet d1"></div>
-    <h2 class="sect-titre reveal d2">Le marché et<br><em>la concurrence</em></h2>
+    <h2 class="sect-titre encrer d2">Le marché et<br><em>la concurrence</em></h2>
     <p class="sect-chapo reveal d3">Un marché anglo-saxon mature où la demande est prouvée, un marché polonais
       émergent où personne n’est encore positionné sur la Provence.</p>
     <div class="filet-pied filet d3"></div>
@@ -444,7 +457,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Le marché</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre reveal d2" style="font-size:88px">Deux marchés, deux dynamiques</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Deux marchés, deux dynamiques</h2>
     <div class="duo" style="top:400px">
       <div class="col">
         <p class="col-titre reveal d3">Anglo-saxon</p>
@@ -479,15 +492,15 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Le marché</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre reveal d2" style="font-size:88px">Quatre signaux qui portent le calendrier</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Quatre signaux qui portent le calendrier</h2>
     <div class="quatuor" style="top:516px">
-      <div class="chiffre reveal d3"><span class="valeur">64 %</span>
+      <div class="chiffre jumbo-in d3"><span class="valeur">64 %</span>
         <p>du marché mondial du tourisme bien-être est féminin.<br>Global Wellness Institute</p></div>
-      <div class="chiffre reveal d4"><span class="valeur">+ 195 %</span>
+      <div class="chiffre jumbo-in d4"><span class="valeur">+ 195 %</span>
         <p>de recherches « retraite poterie » en un an aux États-Unis.</p></div>
-      <div class="chiffre reveal d5"><span class="valeur">+ 20 %</span>
+      <div class="chiffre jumbo-in d5"><span class="valeur">+ 20 %</span>
         <p>de croissance annuelle attendue pour le tourisme culinaire polonais.</p></div>
-      <div class="chiffre reveal d6"><span class="valeur">2027</span>
+      <div class="chiffre jumbo-in d6"><span class="valeur">2027</span>
         <p>ouverture de la ligne aérienne directe Marseille — New York.</p></div>
     </div>
     <div class="filet-pied filet d6"></div>
@@ -498,7 +511,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">La concurrence</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre reveal d2" style="font-size:76px;top:174px">Un prix d’entrée sur le segment actif</h2>
+    <h2 class="titre encrer d2" style="font-size:76px;top:174px">Un prix d’entrée sur le segment actif</h2>
     <p class="chapo reveal d2" style="top:284px;width:1200px;font-size:21px">Prix par nuit en chambre
       individuelle, du moins cher au plus cher.</p>
     <div class="graphe" style="top:352px">
@@ -530,7 +543,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Les chiffres</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre reveal d2" style="font-size:88px">Le modèle, session par session</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Le modèle, session par session</h2>
     <table class="tableau" style="top:400px">
       <tr><th>Hypothèse : 3 500 € par participante</th>
         <th class="n">1 session</th><th class="n">Année 1 · 4 sessions</th></tr>
@@ -551,7 +564,7 @@ body.mode-edition .edit-aide{display:block}
     <div class="bord-aplat"></div>
     <p class="surtitre reveal d1">Les chiffres</p>
     <div class="filet-entete court filet d1"></div>
-    <h2 class="titre court reveal d2" style="font-size:88px">Où part l’argent d’une session</h2>
+    <h2 class="titre court encrer d2" style="font-size:88px">Où part l’argent d’une session</h2>
     <table class="tableau" style="top:400px;width:1120px">
       <tr class="reveal d3"><td>Le lieu</td><td class="n">8 000 €</td></tr>
       <tr class="reveal d4"><td>Restauration et chef</td><td class="n">5 180 €</td></tr>
@@ -578,7 +591,7 @@ body.mode-edition .edit-aide{display:block}
     <div class="bord-aplat"></div>
     <p class="surtitre reveal d1">Où en sommes-nous</p>
     <div class="filet-entete court filet d1"></div>
-    <h2 class="titre court reveal d2" style="font-size:88px">Ce qui est déjà fait</h2>
+    <h2 class="titre court encrer d2" style="font-size:88px">Ce qui est déjà fait</h2>
     <ul class="avancement" style="top:376px;width:1120px">
       <li class="reveal d3"><strong>Le lieu</strong> est identifié, la négociation des quatre sessions 2027 est en cours.</li>
       <li class="reveal d4"><strong>La marque</strong> est sécurisée : nom, logo, noms de domaine.</li>
@@ -601,7 +614,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Le calendrier</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre reveal d2" style="font-size:88px">De l’immatriculation à la session pilote</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">De l’immatriculation à la session pilote</h2>
     <div class="frise" style="top:548px">
       <div class="frise-axe filet d3"></div>
       <div class="frise-etapes">
@@ -628,7 +641,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-encre">
     <p class="sect-num reveal d1">03</p>
     <div class="sect-filet filet d1"></div>
-    <h2 class="sect-titre reveal d2">La demande<br><em>de financement</em></h2>
+    <h2 class="sect-titre encrer d2">La demande<br><em>de financement</em></h2>
     <p class="sect-chapo reveal d3">Un besoin de trésorerie ponctuel, destiné aux acomptes de réservation
       des quatre sessions de 2027.</p>
     <div class="filet-pied filet d3"></div>
@@ -641,7 +654,7 @@ body.mode-edition .edit-aide{display:block}
     <div class="bord-aplat"></div>
     <p class="surtitre reveal d1">La demande</p>
     <div class="filet-entete court filet d1"></div>
-    <h2 class="titre court reveal d2" style="font-size:88px">Un besoin de 15 189 €</h2>
+    <h2 class="titre court encrer d2" style="font-size:88px">Un besoin de 15 189 €</h2>
     <div class="duo serre" style="top:376px">
       <div class="col">
         <span class="col-role reveal d3">D’où vient l’argent</span>
@@ -678,8 +691,8 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">La demande</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre reveal d2" style="font-size:88px">Remboursé sur l’année de lancement</h2>
-    <div class="heros reveal d3" style="top:424px">
+    <h2 class="titre encrer d2" style="font-size:88px">Remboursé sur l’année de lancement</h2>
+    <div class="heros jumbo-in d3" style="top:424px">
       <span class="valeur">21 159 €</span>
       <p class="quoi">de marge nette la première année, pour 13 189 € empruntés. Le prêt se rembourse sur
         les résultats de 2027, et dégage un surplus pour financer la montée en cadence de 2028.</p>
@@ -697,7 +710,7 @@ body.mode-edition .edit-aide{display:block}
   <section class="slide s-ivoire">
     <p class="surtitre reveal d1">Les risques</p>
     <div class="filet-entete filet d1"></div>
-    <h2 class="titre reveal d2" style="font-size:88px">Ce qui peut manquer, et ce que nous opposons</h2>
+    <h2 class="titre encrer d2" style="font-size:88px">Ce qui peut manquer, et ce que nous opposons</h2>
     <div class="risques" style="top:400px">
       <div class="risque reveal d3"><p class="quoi">Aucun retour client avant le pilote</p>
         <p class="reponse">Paulina coordonne depuis un an des retraites pour des structures concurrentes.
@@ -720,7 +733,7 @@ body.mode-edition .edit-aide{display:block}
     <div class="couv-bord"></div>
     <div class="trait-grenat filet d1"></div>
     <p class="couv-surtitre reveal d2">En conclusion</p>
-    <blockquote class="citation reveal d3" style="top:428px;width:1060px;font-size:64px">Le lieu, l’équipe,
+    <blockquote class="citation encrer d3" style="top:428px;width:1060px;font-size:64px">Le lieu, l’équipe,
       le calendrier et les chiffres sont posés. Il ne manque que votre soutien pour ouvrir la première
       session en septembre 2027.</blockquote>
     <img class="couv-logo reveal d5" src="__LOGO__" alt="Les Provençales">
