@@ -389,7 +389,7 @@ body.mode-edition .edit-aide{display:block}
     <p class="surtitre reveal d1">Le concept</p>
     <div class="filet-entete filet d1"></div>
     <h2 class="titre reveal d2" style="font-size:88px">Sept jours, six nuits, huit femmes</h2>
-    <div class="trio" style="top:420px">
+    <div class="trio" style="top:496px">
       <div class="volet reveal d3"><span class="cle">Le lieu</span>
         <p>Le Mas Heyrauds, à Ménerbes. Un choix parmi des dizaines de mas équivalents : le lieu sert la
           communication, il ne fait pas la différence.</p></div>
@@ -530,7 +530,7 @@ body.mode-edition .edit-aide{display:block}
     <div class="filet-entete filet d1"></div>
     <h2 class="titre reveal d2" style="font-size:88px">Le modèle, session par session</h2>
     <table class="tableau" style="top:400px">
-      <tr><th>Hypothèse : 3 500 € TTC par participante, 8 participantes</th>
+      <tr><th>Hypothèse : 3 500 € par participante</th>
         <th class="n">1 session</th><th class="n">Année 1 · 4 sessions</th></tr>
       <tr class="reveal d3"><td>Chiffre d’affaires TTC</td><td class="n">28 000 €</td><td class="n">112 000 €</td></tr>
       <tr class="reveal d4"><td>Chiffre d’affaires HT</td><td class="n">23 333 €</td><td class="n">93 333 €</td></tr>
